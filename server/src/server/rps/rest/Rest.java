@@ -19,7 +19,7 @@ import server.rps.service.RPSService;
 @Path("/players")
 public class Rest {
 	
- //	@Inject
+   @Inject
    private RPSService service;
 	
 	@GET
