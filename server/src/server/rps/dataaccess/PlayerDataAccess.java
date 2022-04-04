@@ -11,7 +11,7 @@ public interface PlayerDataAccess {
 
 	public List<Player> retrievePlayers();
 	
-	public Player retrievePlayer();
+	public Player retrievePlayerByUsername(String username);
 	
 	public void registerPlayer();
 	

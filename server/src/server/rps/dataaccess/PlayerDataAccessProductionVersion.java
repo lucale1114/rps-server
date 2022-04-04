@@ -25,15 +25,15 @@ public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 	}
 
 	@Override
-	public Player retrievePlayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public Player retrievePlayerByUsername(String username) {
+		Query q = em.createQuery("select player from Player player where player.username = :username");
+		q.setParameter("username", username);
+		return (Player) q.getSingleResult();
 	}
 
 	@Override
 	public void registerPlayer() {
-		// TODO Auto-generated method stub
-		
+		em.persist(newPlayer);
 	}
 
 }
