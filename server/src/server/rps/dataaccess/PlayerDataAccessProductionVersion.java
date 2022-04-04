@@ -32,7 +32,7 @@ public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 	}
 
 	@Override
-	public void registerPlayer() {
+	public void registerPlayer(Player newPlayer) {
 		em.persist(newPlayer);
 	}
 
