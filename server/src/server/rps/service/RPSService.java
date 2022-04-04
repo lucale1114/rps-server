@@ -6,6 +6,8 @@ import javax.ejb.Local;
 
 import server.rps.entity.Player;
 
+// Eleni
+
 @Local
 public interface RPSService {
 	

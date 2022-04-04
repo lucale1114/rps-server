@@ -9,13 +9,15 @@ import com.google.inject.Inject;
 import server.rps.dataaccess.PlayerDataAccess;
 import server.rps.entity.Player;
 
+//Eleni
+
 @Stateless
-public class RPSImplementaiton implements RPSService {
+public class RPSImplementation implements RPSService {
 
 	
 	@Inject 
 	private PlayerDataAccess dao;
-	@Override
+	
 	public List<Player> getPlayers() {
 		return dao.retrievePlayers();
 	}
@@ -25,7 +27,7 @@ public class RPSImplementaiton implements RPSService {
 		dao.registerPlayer(newPlayer);
 	}
 
-	@Override
+	
 	public Player getPlayer(String userName) {
 		
 		return dao.retrievePlayerByUsername(userName);
