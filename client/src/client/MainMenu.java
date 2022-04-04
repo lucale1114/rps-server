@@ -7,10 +7,10 @@ import client.game.Game;
 public class MainMenu {
 	
 	private Scanner theScanner;
-	private String userName;
+	private String username;
 	
 	private void displayMainMenu() {
-		System.out.println("Welcome to RPS, " + userName + "!");
+		System.out.println("Welcome to RPS, " + username + "!");
 		System.out.println("1. Play");
 		System.out.println("2. Login");
 		System.out.println("3. Players");
@@ -20,7 +20,7 @@ public class MainMenu {
 	
 	public MainMenu() {
 		theScanner = new Scanner(System.in);
-		userName = "Guest";
+		username = "Guest";
 		displayMainMenu();
 		makeAChoice();
 	}
@@ -32,7 +32,7 @@ public class MainMenu {
 			choiceMade = true;
 			switch(choice) {
 				case 1:
-					Game newGame = new Game(theScanner, userName);
+					Game newGame = new Game(theScanner, username);
 				break;
 				case 2:
 					

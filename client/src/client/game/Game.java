@@ -15,12 +15,14 @@ public class Game {
 	private int aiScore = 0;
 	private String userName;
 	private String botName;
-	private String[] botNames = {"Laika", "Charles Babbage", "Alan Turing", "Ada Lovelace", "Ghost of RPS", "Someone You Know"};
+	private String[] botNames = {"Laika", "Charles Babbage", "Alan Turing", 
+			"Ada Lovelace", "Ghost of RPS", "Someone You Know", "Diogenes", 
+			"Chris Sawyer", "Jon Skeet"};
 	
 	public Game(Scanner theScanner, String userName) {
 		this.theScanner = theScanner;
 		this.userName = userName;
-		botName = botNames[ThreadLocalRandom.current().nextInt(1,botNames.length)];
+		botName = botNames[ThreadLocalRandom.current().nextInt(0,botNames.length)];
 		gameMenu();
 	}
 	
