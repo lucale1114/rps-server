@@ -14,27 +14,26 @@ import javax.ws.rs.Produces;
 import server.rps.entity.Player;
 import server.rps.service.RPSService;
 
-
 @Stateless
 @Path("/players")
 public class Rest {
-	
-   @Inject
-   private RPSService service;
-	
+
+	@Inject
+	private RPSService service;
+
 	@GET
 	@Produces("application/JSON")
-	public List<Player> getPlayers(){
+	public List<Player> getPlayers() {
 		return service.getPlayers();
 	}
-	
+
 	@GET
 	@Produces("application/JSON")
 	@Path("{playerName}")
-	public Player getPlayer(@PathParam("playerName") String username){
+	public Player getPlayer(@PathParam("playerName") String username) {
 		return service.getPlayer(username);
 	}
-	
+
 	@POST
 	@Produces("application/JSON")
 	@Consumes("application/JSON")
@@ -42,5 +41,4 @@ public class Rest {
 		service.registerPlayer(player);
 		return player;
 	}
-	
 }
