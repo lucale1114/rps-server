@@ -13,7 +13,7 @@ public interface RPSService {
 	
 	public void registerPlayer(Player player);
 	
-	public Player getPlayer(String userName);
+	public Player getPlayer(String username);
 	   
 	   
 
