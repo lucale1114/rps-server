@@ -18,7 +18,7 @@ public interface RPSService {
 	
 	public List<Player> getPlayers();
 	
-	public Player registerPlayer(Player player);
+	public void registerPlayer(Player player);
 	
 	public Player getPlayer(String userName);
 	   
