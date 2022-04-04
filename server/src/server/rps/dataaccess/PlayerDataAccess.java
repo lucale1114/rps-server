@@ -13,6 +13,6 @@ public interface PlayerDataAccess {
 	
 	public Player retrievePlayerByUsername(String username);
 	
-	public void registerPlayer();
+	public void registerPlayer(Player newPlayer);
 	
 }
