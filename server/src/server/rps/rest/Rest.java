@@ -12,6 +12,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import server.rps.entity.Player;
+import server.rps.service.RPSService;
 
 
 @Stateless
@@ -19,7 +20,7 @@ import server.rps.entity.Player;
 public class Rest {
 	
  //	@Inject
- // private RPSService service;
+   private RPSService service;
 	
 	@GET
 	@Produces("application/JSON")
