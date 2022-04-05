@@ -13,7 +13,10 @@ public class WinCondition {
 		changeScore();
 	}
 	
-	private void changeScore() {
+	public void changeScore() {
+		System.out.println(score1);
+		System.out.println(score2);
+
 		if (score1==score2) {
 			return;
 		}
@@ -26,3 +29,4 @@ public class WinCondition {
 	
 }
 }
+

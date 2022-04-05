@@ -75,8 +75,8 @@ public class Game {
 		}
 		System.out.println(botName + ": " + aiSay);
 		System.out.println(" ");
-		new WinCondition(this, aiPick, choice);	
-		
+
+		new WinCondition(this, aiPick, choice);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
