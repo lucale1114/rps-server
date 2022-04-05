@@ -11,6 +11,16 @@ public class WinCondition {
 		this.score2 = score2;
 		this.game = game;
 	}
+	public void changeScore() {
+		if (score1==score2) {
+			return;
+		}
+		if (score1==1 && score2==3 || score1==2 && score2 ==1 || socore1==3 && score2==2) {
+			game.addAiScore();
+		}
+		if (score2==1 && score1==3 || score2==2 && score1 ==1 || socore2==3 && score1==2) {
+			game.addPlayerScore();
+	}
 	
-	
+}
 }
