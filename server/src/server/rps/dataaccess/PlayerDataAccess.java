@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ejb.Local;
 
-import server.rps.entity.Player;
+import server.rps.domain.Player;
 
 @Local
 public interface PlayerDataAccess {

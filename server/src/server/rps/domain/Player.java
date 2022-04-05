@@ -1,4 +1,4 @@
-package server.rps.entity;
+package server.rps.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Player {
+public class Player implements java.io.Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

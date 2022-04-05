@@ -2,9 +2,9 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
     version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
-   <persistence-unit name="rpsDb" transaction-type="JTA">
+   <persistence-unit name="rpsDatabase" transaction-type="JTA">
 
-      <jta-data-source>java:/RPSDatabase</jta-data-source>
+      <jta-data-source>java:/rpsDb</jta-data-source>
 
       <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>

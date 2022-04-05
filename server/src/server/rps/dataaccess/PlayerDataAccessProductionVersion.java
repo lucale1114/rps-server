@@ -3,15 +3,13 @@ package server.rps.dataaccess;
 import java.util.List;
 
 import javax.ejb.Stateless;
-import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import server.rps.entity.Player;
+import server.rps.domain.Player;
 
 @Stateless
-@Default
 public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 
 	@PersistenceContext

@@ -4,10 +4,8 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 
-import com.google.inject.Inject;
-
 import server.rps.dataaccess.PlayerDataAccess;
-import server.rps.entity.Player;
+import server.rps.domain.Player;
 
 //Eleni
 
@@ -15,7 +13,7 @@ import server.rps.entity.Player;
 public class RPSImplementation implements RPSService {
 
 	
-	@Inject 
+	@javax.inject.Inject
 	private PlayerDataAccess dao;
 	
 	public List<Player> getPlayers() {

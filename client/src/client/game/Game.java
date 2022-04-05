@@ -60,7 +60,7 @@ public class Game {
 		System.out.println(" ");
 		System.out.println(userName + ": " + playerSay);
 	
-		aiPick = ThreadLocalRandom.current().nextInt(1,3);
+		aiPick = ThreadLocalRandom.current().nextInt(1,4);
 		String aiSay = null;
 		switch(aiPick) {
 		case 1:
@@ -75,7 +75,8 @@ public class Game {
 		}
 		System.out.println(botName + ": " + aiSay);
 		System.out.println(" ");
-		WinCondition checkResult = new WinCondition(this, aiScore, playerScore);		
+		new WinCondition(this, aiPick, choice);	
+		
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
