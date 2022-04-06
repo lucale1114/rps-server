@@ -6,17 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Player implements java.io.Serializable{
+public class Player implements java.io.Serializable {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String username;
 	private String password;
 	private int wins;
 	private int defeats;
-	
-	public Player() {}
+
+	public Player() {
+	}
 
 	public Player(String username, String password, int wins, int defeats) {
 		super();
@@ -65,6 +66,5 @@ public class Player implements java.io.Serializable{
 	public void setDefeats(int defeats) {
 		this.defeats = defeats;
 	}
-	
-	
+
 }

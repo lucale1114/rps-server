@@ -14,7 +14,7 @@ public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 
 	@PersistenceContext
 	private EntityManager em;
-	
+
 	public List<Player> retrievePlayers() {
 		Query q = em.createQuery("select player from Player player");
 		List<Player> players = q.getResultList();

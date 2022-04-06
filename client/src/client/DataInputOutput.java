@@ -37,4 +37,5 @@ public class DataInputOutput {
 		}
 
 		response.close();
-}}
+	}
+}
