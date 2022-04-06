@@ -5,10 +5,10 @@ import java.util.Scanner;
 import client.game.Game;
 
 public class MainMenu {
-	
+
 	private Scanner theScanner;
 	private String username;
-	
+
 	private void displayMainMenu() {
 		System.out.println("Welcome to RPS, " + username + "!");
 		System.out.println("1. Play");
@@ -17,45 +17,45 @@ public class MainMenu {
 		System.out.println("4. Register");
 		System.out.println("5. Exit");
 	}
-	
+
 	public MainMenu() {
 		theScanner = new Scanner(System.in);
 		username = "Guest";
 		displayMainMenu();
 		makeAChoice();
 	}
-	
+
 	public void makeAChoice() {
 		int choice = theScanner.nextInt();
 		boolean choiceMade = false;
 		while (choiceMade == false) {
 			choiceMade = true;
-			switch(choice) {
-				case 1:
-					Game newGame = new Game(theScanner, username);
+			switch (choice) {
+			case 1:
+				Game newGame = new Game(theScanner, username);
 				break;
-				case 2:
-					
+			case 2:
+
 				break;
-				case 3:
-					
+			case 3:
+
 				break;
-				case 4:
-					
+			case 4:
+
 				break;
-				case 5:
-					System.exit(0);
+			case 5:
+				System.exit(0);
 				break;
-				default:
-					choiceMade = false;
-					System.out.println("Invalid option.");
-					choice = theScanner.nextInt();
+			default:
+				choiceMade = false;
+				System.out.println("Invalid option.");
+				choice = theScanner.nextInt();
 				break;
-				
+
 			}
 		}
 	}
-	
+
 	public Scanner getTheScanner() {
 		return theScanner;
 	}

@@ -10,15 +10,11 @@ import server.rps.domain.Player;
 
 @Local
 public interface RPSService {
-	
+
 	public List<Player> getPlayers();
-	
+
 	public void registerPlayer(Player player);
-	
+
 	public Player getPlayer(String username);
-	   
-	   
 
 }
-
- 
