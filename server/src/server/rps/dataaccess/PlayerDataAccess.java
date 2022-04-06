@@ -10,9 +10,9 @@ import server.rps.domain.Player;
 public interface PlayerDataAccess {
 
 	public List<Player> retrievePlayers();
-	
+
 	public Player retrievePlayerByUsername(String username);
-	
+
 	public void registerPlayer(Player newPlayer);
-	
+
 }

@@ -12,24 +12,21 @@ import server.rps.domain.Player;
 @Stateless
 public class RPSImplementation implements RPSService {
 
-	
 	@javax.inject.Inject
 	private PlayerDataAccess dao;
-	
+
 	public List<Player> getPlayers() {
 		return dao.retrievePlayers();
 	}
 
 	public void registerPlayer(Player newPlayer) {
-		
+
 		dao.registerPlayer(newPlayer);
 	}
 
-	
 	public Player getPlayer(String userName) {
-		
+
 		return dao.retrievePlayerByUsername(userName);
 	}
-
 
 }
