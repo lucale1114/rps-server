@@ -9,24 +9,22 @@ import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 
 public class DataInputOutput {
-	public void adfjoadsf() {
+	
+	public void register(Player player) {
 		Client client = ClientBuilder.newClient();
 
-		Player ben = new Player();
-		ben.setUsername("Ben");
-		ben.setPassword("Tester");
-		ben.setWins(1000);
-		ben.setDefeats(1000);
+		Entity plr = Entity.entity(player, "application/JSON");
 
-		Entity benEntity = Entity.entity(ben, "application/JSON");
+		Response response = client.target("http://localhost:8080/RPSLeaderboard/stats/players").request()
+				.buildPost(plr).invoke();
 
-		Response response = client.target("http://localhost:8080/EmployeeManagement/webservice/employees").request()
-				.buildPost(benEntity).invoke();
-
-		System.out.println(response.readEntity(Player.class).getId());
 		response.close();
-
-		response = client.target("http://localhost:8080/EmployeeManagement/webservice/employees").request().buildGet()
+		client.close();
+	}
+	
+	public void getAllPlayers() {
+		Client client = ClientBuilder.newClient();
+		Response response = client.target("http://localhost:8080/RPSLeaderboard/stats/players").request().buildGet()
 				.invoke();
 
 		List<Player> players = response.readEntity(new GenericType<List<Player>>() {
@@ -37,4 +35,28 @@ public class DataInputOutput {
 		}
 
 		response.close();
-}}
+		client.close();
+	}
+	
+	public void getPlayerInfo(String username) {
+		Client client = ClientBuilder.newClient();
+		// Safe?
+		Response response = client.target("http://localhost:8080/RPSLeaderboard/stats/players/" + username).request().buildGet()
+				.invoke();
+
+		Player guy = response.readEntity(Player.class);
+	
+		System.out.println();
+		System.out.println("Showing info for:");
+		System.out.println(guy.getUsername());
+		System.out.println("---");
+		System.out.println("Wins: " + guy.getWins());
+		System.out.println("Defeats: " + guy.getDefeats());
+		System.out.println();
+		
+		response.close();
+		client.close();
+	}
+}
+
+
