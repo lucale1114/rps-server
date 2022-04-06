@@ -8,18 +8,24 @@ public class Leaderboard {
 	private DataInputOutput data;
 	private MainMenu mainMenu;
 
-	public Leaderboard(MainMenu mainMenu) {
+	public Leaderboard(MainMenu mainMenu, Scanner theScanner) {
 		this.mainMenu = mainMenu;
+		this.theScanner = theScanner;
+		data = new DataInputOutput();
+		makeAChoice();
 	}
 
 	public void displayLeaderboard() {
+		System.out.println();
 		System.out.println("Leaderboard:");
 		System.out.println("1. See leaderboard");
 		System.out.println("2. Search for player");
 		System.out.println("3. Back to main menu");
+		System.out.println();
 	}
 
 	public void makeAChoice() {
+		displayLeaderboard();
 		int choice = theScanner.nextInt();
 		boolean choiceMade = false;
 		while (choiceMade == false) {

@@ -11,6 +11,15 @@ public class MainMenu {
 	private Player plr;
 	private DataInputOutput data;
 	
+	
+	public void displayMainMenu() {
+		System.out.println("Welcome to RPS, " + username + "!");
+		System.out.println("1. Play");
+		System.out.println("2. Players");
+		System.out.println("3. Register");
+		System.out.println("4. Exit");
+	}
+
 	public MainMenu() {
 		theScanner = new Scanner(System.in);
 		username = "Guest";
@@ -18,16 +27,6 @@ public class MainMenu {
 		displayMainMenu();
 		makeAChoice();
 	}
-	
-	public void displayMainMenu() {
-		System.out.println("Welcome to RPS, " + username + "!");
-		System.out.println("1. Play");
-		System.out.println("2. Login");
-		System.out.println("3. Players");
-		System.out.println("4. Register");
-		System.out.println("5. Exit");
-	}
-
 
 	public void makeAChoice() {
 		int choice = theScanner.nextInt();
@@ -36,20 +35,26 @@ public class MainMenu {
 			choiceMade = true;
 			switch (choice) {
 			case 1:
-				Game newGame = new Game(theScanner, plr, this);
+				if (plr != null) {
+					Game newGame = new Game(theScanner, plr, this);
+				}
+				else
+				{
+					System.out.println("You need an account to play!");
+					choiceMade = false;
+					choice = 3;
+				}
 				break;
 			case 2:
-				
+				new Leaderboard(this, theScanner);
 				break;
 			case 3:
-				data.getAllPlayers();
-				break;
-			case 4:
 				System.out.println("Enter username.");
 				String user = theScanner.next();
 				System.out.println("Enter password.");
 				String password = theScanner.next();
 				System.out.println("Registered!");
+				System.out.println();
 				plr = new Player();
 				plr.setUsername(user);
 				plr.setPassword(password);
@@ -58,7 +63,7 @@ public class MainMenu {
 				choiceMade = false;
 				choice = theScanner.nextInt();
 				break;
-			case 5:
+			case 4:
 				data.register(plr);
 				System.exit(0);
 				break;
