@@ -11,6 +11,13 @@ public class MainMenu {
 	private Player plr;
 	private DataInputOutput data;
 	
+	public MainMenu() {
+		theScanner = new Scanner(System.in);
+		username = "Guest";
+		data = new DataInputOutput();
+		displayMainMenu();
+		makeAChoice();
+	}
 	
 	public void displayMainMenu() {
 		System.out.println("Welcome to RPS, " + username + "!");
@@ -21,13 +28,6 @@ public class MainMenu {
 		System.out.println("5. Exit");
 	}
 
-	public MainMenu() {
-		theScanner = new Scanner(System.in);
-		username = "Guest";
-		data = new DataInputOutput();
-		displayMainMenu();
-		makeAChoice();
-	}
 
 	public void makeAChoice() {
 		int choice = theScanner.nextInt();
