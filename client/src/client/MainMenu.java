@@ -8,8 +8,11 @@ public class MainMenu {
 
 	private Scanner theScanner;
 	private String username;
-
-	private void displayMainMenu() {
+	private Player plr;
+	private DataInputOutput data;
+	
+	
+	public void displayMainMenu() {
 		System.out.println("Welcome to RPS, " + username + "!");
 		System.out.println("1. Play");
 		System.out.println("2. Login");
@@ -21,6 +24,7 @@ public class MainMenu {
 	public MainMenu() {
 		theScanner = new Scanner(System.in);
 		username = "Guest";
+		data = new DataInputOutput();
 		displayMainMenu();
 		makeAChoice();
 	}
@@ -32,18 +36,30 @@ public class MainMenu {
 			choiceMade = true;
 			switch (choice) {
 			case 1:
-				Game newGame = new Game(theScanner, username);
+				Game newGame = new Game(theScanner, plr, this);
 				break;
 			case 2:
-
+				
 				break;
 			case 3:
-
+				data.getAllPlayers();
 				break;
 			case 4:
-
+				System.out.println("Enter username.");
+				String user = theScanner.next();
+				System.out.println("Enter password.");
+				String password = theScanner.next();
+				System.out.println("Registered!");
+				plr = new Player();
+				plr.setUsername(user);
+				plr.setPassword(password);
+			    username = plr.getUsername();
+				displayMainMenu();
+				choiceMade = false;
+				choice = theScanner.nextInt();
 				break;
 			case 5:
+				data.register(plr);
 				System.exit(0);
 				break;
 			default:

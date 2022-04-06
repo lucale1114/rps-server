@@ -1,5 +1,6 @@
 package server.rps.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +12,7 @@ public class Player implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@Column(unique=true)
 	private String username;
 	private String password;
 	private int wins;

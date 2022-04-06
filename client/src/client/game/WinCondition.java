@@ -14,8 +14,6 @@ public class WinCondition {
 	}
 
 	public void changeScore() {
-		System.out.println(score1);
-		System.out.println(score2);
 
 		if (score1 == score2) {
 			return;

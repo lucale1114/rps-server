@@ -16,7 +16,7 @@ public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 	private EntityManager em;
 
 	public List<Player> retrievePlayers() {
-		Query q = em.createQuery("select player from Player player");
+		Query q = em.createQuery("select player from Player as player");
 		List<Player> players = q.getResultList();
 		return players;
 	}
