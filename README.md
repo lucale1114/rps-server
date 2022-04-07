@@ -36,7 +36,6 @@ This project is based on the Wildfly Application Server.
 * cd client
 * ant BuildAll
 
-
 ## Run the project in Eclipse
 
 * Right click on App.java and run as java application.
