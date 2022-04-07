@@ -18,7 +18,7 @@ This project is based on the Wildfly Application Server.
   * Respond no when asked if the user user should be used to connect to another AS process.
 * Start the server.
 * Find the standalone deployment directory					 
-* clone this project
+* Git clone project
 * Change the property "server-dist" in server/build.xml to the standalone deployment directory
 
 ## Steps to build the project 
