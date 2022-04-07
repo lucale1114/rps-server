@@ -30,8 +30,13 @@ public class DataInputOutput {
 		List<Player> players = response.readEntity(new GenericType<List<Player>>() {
 		});
 
+		int i = 0;
 		for (Player p : players) {
-			System.out.println(p);
+			i++;
+			System.out.println(i + ". " + p.getUsername() + " - Wins: " + p.getWins() + " - Defeats: " + p.getDefeats());
+			if (i == 20) {
+				break;
+			}
 		}
 
 		response.close();

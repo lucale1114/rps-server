@@ -16,10 +16,12 @@ public class PlayerDataAccessProductionVersion implements PlayerDataAccess {
 	private EntityManager em;
 
 	public List<Player> retrievePlayers() {
-		Query q = em.createQuery("select player from Player as player");
+		Query q = em.createQuery("select player from Player player order by player.wins desc");
 		List<Player> players = q.getResultList();
 		return players;
 	}
+	
+	
 
 	public Player retrievePlayerByUsername(String username) {
 		Query q = em.createQuery("select player from Player player where player.username = :username");
