@@ -10,7 +10,7 @@ This project is based on the Wildfly Application Server.
 * Ant
 
 ## Environment configuration
-
+* Install ant.
 * Download and install Wildfly, you should have jdk 8 or 11 for compatibility for wildfly. 
 * Create a user by using add-user command from bin directory
   * Give name and password to the user
@@ -23,12 +23,21 @@ This project is based on the Wildfly Application Server.
 
 ## Steps to build the project 
 
-### Build the server in Eclipsee
+### Build the server in Eclipse
 
 * Import project in Eclipse.
 * Right click on build.xml file in server and choose run as java application.
 
-## Run the project in Eclipset
+### Build the server in command line
+
+* cd server
+* ant BuildAll
+* cd ..
+* cd client
+* ant BuildAll
+
+
+## Run the project in Eclipse
 
 * Right click on App.java and run as java application.
 
