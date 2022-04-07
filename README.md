@@ -17,19 +17,26 @@ This project is based on the Wildfly Application Server.
   * Add the user to the management realm.
   * Respond no when asked if the user user should be used to connect to another AS process.
 * Start the server.
-* Find the standalone deployment directory					 
-* Git clone project
+* Find the standalone deployment directory
+* clone this project
 * Change the property "server-dist" in server/build.xml to the standalone deployment directory
 
 ## Steps to build the project 
 
-## Build the server in Eclipsee
+### Build the server in Eclipsee
 
 * Import project in Eclipse.
 * Right click on build.xml file in server and choose run as java application.
 
-## Run the project in Eclipse
+## Run the project in Eclipset
 
 * Right click on App.java and run as java application.
+
+## Run the project from the command line
+
+* cd client
+* ant BuildAll
+* ant run
+
 
 # Play the game!
