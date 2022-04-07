@@ -11,25 +11,37 @@ This project is based on the Wildfly Application Server.
 
 ## Environment configuration
 
-* Install Wildfly
-* Find the standalone deployment directory 
+* Download and install Wildfly, you should have jdk 8 or 11 for compatibility for wildfly. 
+* Create a user by using add-user command from bin directory
+  * Give name and password to the user
+  * Add the user to the management realm.
+  * Respond no when asked if the user user should be used to connect to another AS process.
+* Start the server.
+* Find the standalone deployment directory					 
 * clone this project
 * Change the property "server-dist" in server/build.xml to the standalone deployment directory
 
 ## Steps to build the project 
 
-### build the server
+### Build the server in Eclipsee
+
+* Import project in Eclipse.
+* Right click on build.xml file in server and choose run as java application.
+### Build the server in command line
 
 * cd server
 * ant BuildAll
-
-### build the client
-
+* cd ..
 * cd client
 * ant BuildAll
 
-# Run the client
+## Run the project in Eclipset
+
+* Right click on App.java and run as java application.
+
+## Run the project from the command line
 
 * ant run
+
 
 # Play the game!
