@@ -23,25 +23,13 @@ This project is based on the Wildfly Application Server.
 
 ## Steps to build the project 
 
-### Build the server in Eclipsee
+## Build the server in Eclipsee
 
 * Import project in Eclipse.
 * Right click on build.xml file in server and choose run as java application.
-### Build the server in command line
 
-* cd server
-* ant BuildAll
-* cd ..
-* cd client
-* ant BuildAll
-
-## Run the project in Eclipset
+## Run the project in Eclipse
 
 * Right click on App.java and run as java application.
-
-## Run the project from the command line
-
-* ant run
-
 
 # Play the game!

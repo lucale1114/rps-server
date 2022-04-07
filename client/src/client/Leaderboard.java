@@ -32,7 +32,7 @@ public class Leaderboard {
 			choiceMade = true;
 			switch (choice) {
 			case 1:
-				System.out.println("Leaderboard:");
+				System.out.println("Leaderboard (Top 15):");
 				data.getAllPlayers();
 				choiceMade = false;
 				displayLeaderboard();

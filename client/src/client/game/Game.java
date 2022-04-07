@@ -20,7 +20,7 @@ public class Game {
 	private String username;
 	private Player plr;
 	private String botName;
-	private String[] botNames = {"Laika", "Charles Babbage", "Alan Turing", 
+	private String[] botNames = {"Laika the Dog", "Charles Babbage", "Alan Turing", 
 			"Ada Lovelace", "Diogenes", "Chris Sawyer",
 			"Jon Skeet", "Jun'ya Ota", "Paul Romero", "Robin Walker"};
 	

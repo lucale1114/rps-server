@@ -34,7 +34,7 @@ public class DataInputOutput {
 		for (Player p : players) {
 			i++;
 			System.out.println(i + ". " + p.getUsername() + " - Wins: " + p.getWins() + " - Defeats: " + p.getDefeats());
-			if (i == 20) {
+			if (i == 15) {
 				break;
 			}
 		}
